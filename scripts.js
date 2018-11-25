@@ -15,7 +15,6 @@ function upLoad() {
         xhr.onreadystatechange = function(e) {
             if (xhr.readyState == 4 && xhr.status == 200) {
                 let response = JSON.parse(xhr.responseText);
-                console.log(response);
                 let picUrl = response.secure_url;
                 let thumbNail = picUrl.split('/');
                 thumbNail.splice(-2, 0, 'w_150,c_scale');
